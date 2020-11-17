@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Link from "../../common/CustomLink";
-import { Redirect } from "react-router-dom";
+// import Link from "../../common/CustomLink";
+// import { Redirect } from "react-router-dom";
 // components
 import TextField from "@material-ui/core/TextField";
 
@@ -45,7 +45,7 @@ class InputLogin extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.userLogin(this.state);
+    // this.userLogin(this.state);
   };
 
   render() {
@@ -75,13 +75,13 @@ class InputLogin extends Component {
           >
             Login
           </button>
-          <Link to="/signup">
+          {/* <Link to="/signup"> */}
             <button
               className="btn btn-outline-danger"
             >
               SignUp
             </button>
-          </Link>
+          {/* </Link> */}
         </div>
       </form>
     );
