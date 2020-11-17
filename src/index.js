@@ -42,4 +42,6 @@ import Login from "./components/Login/Login";
 
 export const App = () => <h1>App</h1>
 
-export const LoginPage = () => <Login />;
+export const LoginPage = ({ backgroundImage }) => (
+  <Login backgroundImage={backgroundImage} />
+);

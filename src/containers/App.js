@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -32,20 +32,22 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className="App">
-        <AsideNavbar />
-        <Switch>
-          <Route exact path="/" component={MainContent} />
-          <Route exact path="/list" component={MainItem} />
-          <Route exact path="/detail/:id" component={CardInfo} />
+      <Router>
+          <div className="App">
+            <AsideNavbar />
+            <Switch>
+              <Route exact path="/" component={MainContent} />
+              <Route exact path="/list" component={MainItem} />
+              <Route exact path="/detail/:id" component={CardInfo} />
 
-          <MainProfile />
-        </Switch>
-        <div className="Logout">
-          {" "}
-          <Logout></Logout>
-        </div>
-      </div>
+              <MainProfile />
+            </Switch>
+            <div className="Logout">
+              {" "}
+              <Logout></Logout>
+            </div>
+          </div>
+      </Router>
     </Provider>
   );
 }

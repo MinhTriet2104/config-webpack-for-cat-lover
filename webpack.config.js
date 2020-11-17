@@ -15,7 +15,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: "babel-loader",
       },
-      
+
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -24,10 +24,10 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(png|jpg)$/,
-        loader: 'url-loader'
-      },
+      // {
+      //   test: /\.(png|jpg)$/,
+      //   loader: 'url-loader'
+      // },
       {
         test: /\.s[ac]ss$/i,
         use: [

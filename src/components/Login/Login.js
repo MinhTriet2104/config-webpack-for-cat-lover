@@ -9,9 +9,11 @@ import "./Login.scss";
 // images
 import GoogleIcon from "../../images/google_icon.svg";
 import FacebookIcon from "../../images/facebook_icon.svg";
+import CatBg from "../../images/cat.png";
+
 import InputLogin from "./InputLogin";
 
-const Login = () => {
+const Login = ({ backgroundImage }) => {
   // const history = useHistory();
 
   const responseFacebook = async (res) => {
@@ -35,7 +37,12 @@ const Login = () => {
   return (
     <div className="LoginContainer">
       <div className="LoginWrapper">
-        <div className="LeftSection"></div>
+        <div
+          style={{
+            backgroundImage: `url(${backgroundImage || CatBg})`,
+          }}
+          className="LeftSection"
+        ></div>
         <div className="RightSection">
           <h2 className="LoginTitle">Login With</h2>
 
