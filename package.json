@@ -1,9 +1,8 @@
 {
     "name": "react-cat-lover",
-    "version": "0.1.0",
-    "description": "",
+    "version": "0.1.1",
+    "description": "react-cat-lover",
     "main": "./dist/index.js",
-    "license": "MIT",
     "scripts": {
         "build": "webpack"
     },
