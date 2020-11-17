@@ -1,7 +1,7 @@
 import React from "react";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import GoogleLogin from "react-google-login";
-import { useHistory, Redirect } from "react-router-dom";
+// import { useHistory, Redirect } from "react-router-dom";
 
 // styles
 import "./Login.scss";
@@ -12,12 +12,12 @@ import FacebookIcon from "../../images/facebook_icon.svg";
 import InputLogin from "./InputLogin";
 
 const Login = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   const responseFacebook = async (res) => {
     if (res.status !== "unknown") {
       localStorage.setItem("accessToken", res.accessToken);
-      history.replace("/");
+      // history.replace("/");
       console.log(res);
     }
   };
@@ -25,7 +25,7 @@ const Login = () => {
   const responseGoogle = async (res) => {
     if (res.profileObj.name) {
       localStorage.setItem("accessToken", res.accessToken);
-      history.replace("/");
+      // history.replace("/");
       console.log(res);
     }
   };
@@ -52,7 +52,7 @@ const Login = () => {
               </Button>
             </Link>
           </div> */}
-          <InputLogin redirectToHome={() => history.replace("/")} />
+          <InputLogin redirectToHome={() => null} />
           <h5>Or With</h5>
 
           <FacebookLogin

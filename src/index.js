@@ -7,7 +7,7 @@ import React from "react";
 // import thunk from "redux-thunk";
 
 // import App from "./containers/App";
-// import Login from "./components/Login/Login";
+import Login from "./components/Login/Login";
 
 // import "./index.scss";
 
@@ -42,4 +42,4 @@ import React from "react";
 
 export const App = () => <h1>App</h1>
 
-// export const LoginPage = () => <Login />;
+export const LoginPage = () => <Login />;
