@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   mode: "production",
@@ -11,18 +11,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js?$/,
+        test: /\.js?$/i,
         exclude: /(node_modules)/,
         use: "babel-loader",
       },
-
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            publicPath: "./",
           },
-        ],
+        },
       },
       // {
       //   test: /\.(png|jpg)$/,
@@ -36,24 +37,30 @@ module.exports = {
           // Translates CSS into CommonJS
           "css-loader",
           // Compiles Sass to CSS
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          "resolve-url-loader",
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: "svg-url-loader",
-            // options: {
-            //   limit: 10000,
-            // },
-          },
-        ],
-      },
+      // {
+      //   test: /\.svg$/,
+      //   use: [
+      //     {
+      //       loader: "svg-url-loader",
+      //       // options: {
+      //       //   limit: 10000,
+      //       // },
+      //     },
+      //   ],
+      // },
     ],
   },
   resolve: {
