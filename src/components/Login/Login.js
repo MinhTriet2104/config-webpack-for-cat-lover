@@ -72,7 +72,7 @@ const Login = ({ backgroundImage }) => {
                 <span
                   className="icon"
                   style={{
-                    backgroundImage: `url(${require('../../images/google_icon.svg')})`,
+                    backgroundImage: `url(${FacebookIcon})`,
                   }}
                 ></span>
                 <span className="text">Facebook</span>

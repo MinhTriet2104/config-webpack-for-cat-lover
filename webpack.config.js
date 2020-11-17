@@ -43,7 +43,6 @@ module.exports = {
               sourceMap: true,
             },
           },
-          "resolve-url-loader",
         ],
       },
       {
