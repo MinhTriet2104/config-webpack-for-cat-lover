@@ -8,10 +8,10 @@ class InputLogin extends Component {
   constructor(props) {
     super(props);
 
-    state = {
-      username: "",
-      password: "",
-    };
+    // state = {
+    //   username: "",
+    //   password: "",
+    // };
   }
 
   userLogin = (user) => {
@@ -38,9 +38,9 @@ class InputLogin extends Component {
   };
 
   handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+    // this.setState({
+    //   [event.target.name]: event.target.value,
+    // });
   };
 
   handleSubmit = (event) => {
@@ -49,15 +49,15 @@ class InputLogin extends Component {
   };
 
   render() {
-    if (localStorage.getItem("accessToken")) return <Redirect to="/" />;
+    // if (localStorage.getItem("accessToken")) return <Redirect to="/" />;
     return (
       <form onSubmit={this.handleSubmit}>
         <TextField
           label="Username"
           name="username"
           placeholder="Username"
-          value={this.state.username}
-          onChange={this.handleChange}
+          // value={this.state.username}
+          // onChange={this.handleChange}
         />
         <br />
         <TextField
@@ -65,8 +65,8 @@ class InputLogin extends Component {
           type="password"
           name="password"
           placeholder="Password"
-          value={this.state.password}
-          onChange={this.handleChange}
+          // value={this.state.password}
+          // onChange={this.handleChange}
         />
         <br />
         <div className="ButtonGroup">

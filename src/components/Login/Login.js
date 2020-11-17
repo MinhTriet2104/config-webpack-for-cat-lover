@@ -30,7 +30,7 @@ const Login = () => {
     }
   };
 
-  if (localStorage.getItem("accessToken")) return <Redirect to="/" />;
+  // if (localStorage.getItem("accessToken")) return <Redirect to="/" />;
 
   return (
     <div className="LoginContainer">
