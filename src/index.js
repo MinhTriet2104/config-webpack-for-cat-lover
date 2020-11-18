@@ -1,5 +1,7 @@
 import React from "react";
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 // import { Provider } from "react-redux";
 // import { createStore, compose, applyMiddleware } from "redux";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -9,7 +11,7 @@ import React from "react";
 // import App from "./containers/App";
 import Login from "./components/Login/Login";
 
-// import "./index.scss";
+import "./index.scss";
 
 // import reducer from "./reducers/index";
 // import SignUp from "./components/SignUp/SignUp";

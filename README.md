@@ -9,7 +9,7 @@ Generate a page like Tinder but for Cats
 
 # Installing
 Using npm:
-```js
+```
 npm install react-cat-lover
 ```
 
